@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui/buttons/PrimaryButton Snapshot button: button 1`] = `
+<button
+  type="button"
+>
+  label
+</button>
+`;
+
+exports[`ui/buttons/PrimaryButton Snapshot input: input 1`] = `
+<input
+  type="button"
+  value="OK"
+/>
+`;
+
+exports[`ui/buttons/PrimaryButton Snapshot link: link 1`] = `
+<a
+  href="/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  role="button"
+>
+  label
+</a>
+`;
