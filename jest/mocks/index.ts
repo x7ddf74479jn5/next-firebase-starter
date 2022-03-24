@@ -1,1 +1,0 @@
-export { setupWindow } from "./window";
