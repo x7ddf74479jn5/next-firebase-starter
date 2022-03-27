@@ -1,23 +1,14 @@
 import "@/styles/global.css";
 
 import type { CustomAppProps } from "next/app";
-// import { usePageView } from "@/lib/gtag";
+import { RecoilRoot } from "recoil";
 
 const App = ({ Component, pageProps }: CustomAppProps) => {
-  // if (process.env.NODE_ENV === 'development') {
-  //   const MockServer = () => import('mocks//msw/worker');
-  //   MockServer();
-  // }
-
-  // usePageView();
-
-  const getLayout =
-    Component.getLayout ??
-    ((page) => {
-      return page;
-    });
-
-  return getLayout(<Component {...pageProps} />);
+  return (
+    <RecoilRoot>
+      <Component {...pageProps} />
+    </RecoilRoot>
+  );
 };
 
 export default App;
