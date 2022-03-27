@@ -4,6 +4,7 @@ module.exports = {
   parserOptions: {
     project: "./tsconfig.json",
   },
+  settings: { tailwindcss: { groupByResponsive: true } },
   plugins: ["simple-import-sort", "sort-destructure-keys", "tailwindcss"],
   extends: [
     "plugin:@typescript-eslint/recommended",
