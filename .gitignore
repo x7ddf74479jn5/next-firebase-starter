@@ -35,4 +35,7 @@ yarn-error.log*
 
 # Optional eslint cache
 .eslintcache
-public/mockServiceWorker.js
+
+# firebase
+.firebase/
+firebase-debug.log*
