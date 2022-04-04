@@ -1,6 +1,7 @@
 import "@/styles/global.css";
 
 import type { CustomAppProps } from "next/app";
+import { memo } from "react";
 import { RecoilRoot } from "recoil";
 import { SWRConfig } from "swr";
 
@@ -20,4 +21,4 @@ const App = ({ Component, pageProps }: CustomAppProps) => {
   );
 };
 
-export default App;
+export default memo(App);
