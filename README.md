@@ -8,3 +8,7 @@
 - Tailwind CSS
 - ESLint
 - Prettier
+
+## TODO
+
+Add firestore.rules and storage.rules to gitignore
