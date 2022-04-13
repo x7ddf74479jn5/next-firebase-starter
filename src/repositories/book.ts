@@ -2,9 +2,9 @@ import { collection, doc, getDocs, setDoc } from "firebase/firestore";
 
 import { db, getConverter } from "@/lib/firebase";
 import type { Book } from "@/models/book";
-import { assertBook } from "@/models/book";
+import { bookSchema } from "@/models/book";
 
-const bookConverter = getConverter<Book>(assertBook);
+const bookConverter = getConverter<Book>(bookSchema.parse);
 
 export const addBook = async (book: Book) => {
   const docRef = doc(db, "books", book.id).withConverter(bookConverter);
