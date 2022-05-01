@@ -1,1 +1,4 @@
-export const getCacheKeyGenerator = (model: string) => (id?: string) => `${model}${id ? `-${id}` : ""}`;
+export const getCacheKeyGenerator =
+  (model: string) =>
+  (...keySegments: string[]) =>
+    `${model}${keySegments.length > 0 ? `/${keySegments.join("/")}` : ""}`;
