@@ -7,6 +7,12 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   swcMinify: true,
+  compiler: {
+    reactRemoveProperties: true,
+    removeConsole: {
+      exclude: ["error", "warn", "info"],
+    },
+  },
 };
 
 module.exports = nextConfig;
