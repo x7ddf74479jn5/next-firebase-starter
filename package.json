@@ -11,10 +11,10 @@
     "deploy:index": "firebase deploy --only firestore:indexes",
     "start:emulators": "firebase emulators:start --import=./firebase_emulators_data --export-on-exit=./firebase_emulators_data",
     "lint": "next lint",
-    "prettier": "prettier --check .",
+    "prettier": "prettier --cache --check .",
     "fix": "run-s -l -c fix:lint fix:prettier",
     "fix:lint": "next lint --fix",
-    "fix:prettier": "prettier --write .",
+    "fix:prettier": "prettier --cache --write .",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -38,10 +38,10 @@
     "eslint-plugin-sort-destructure-keys": "1.4.0",
     "eslint-plugin-tailwindcss": "3.5.2",
     "husky": "8.0.1",
-    "lint-staged": "12.5.0",
+    "lint-staged": "13.0.1",
     "npm-run-all": "4.1.5",
     "postcss": "8.4.14",
-    "prettier": "2.6.2",
+    "prettier": "2.7.0",
     "tailwindcss": "3.1.2",
     "typescript": "4.7.3"
   },
