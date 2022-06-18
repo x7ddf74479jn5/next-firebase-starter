@@ -1,4 +1,4 @@
-import type { CollectionReference, DocumentReference, PartialWithFieldValue } from "firebase/firestore";
+import type { PartialWithFieldValue } from "firebase/firestore";
 import { addDoc, deleteDoc } from "firebase/firestore";
 import { collection, doc, getDoc, getDocs, updateDoc } from "firebase/firestore";
 
@@ -8,32 +8,32 @@ import { bookSchema } from "@/models/book";
 
 const bookConverter = getConverter<Book>(bookSchema.parse);
 
-export const getBookDocRef = (id: string) => {
+const getBookDocRef = (id: string) => {
   return doc(db, "books", id).withConverter(bookConverter);
 };
 
-export const getBookColRef = () => {
+const getBookColRef = () => {
   return collection(db, "books").withConverter(bookConverter);
 };
 
-export const addBook = async (ref: CollectionReference<Book>, book: Book) => {
-  await addDoc(ref, book);
+export const addBook = async (book: Book) => {
+  await addDoc(getBookColRef(), book);
 };
 
-export const getBook = async (ref: DocumentReference<Book>) => {
-  const doc = await getDoc<Book>(ref);
+export const getBook = async (id: string) => {
+  const doc = await getDoc<Book>(getBookDocRef(id));
   return doc.data();
 };
 
-export const getBooks = async (ref: CollectionReference<Book>) => {
-  const snapshot = await getDocs<Book>(ref);
+export const getBooks = async () => {
+  const snapshot = await getDocs<Book>(getBookColRef());
   return snapshot.docs.map((doc) => doc.data());
 };
 
-export const updateBook = async (ref: DocumentReference<Book>, book: PartialWithFieldValue<Book>) => {
-  await updateDoc<Book>(ref, book);
+export const updateBook = async (id: string, book: PartialWithFieldValue<Book>) => {
+  await updateDoc<Book>(getBookDocRef(id), book);
 };
 
-export const deleteBook = async (ref: DocumentReference<Book>) => {
-  await deleteDoc(ref);
+export const deleteBook = async (id: string) => {
+  await deleteDoc(getBookDocRef(id));
 };

@@ -2,7 +2,7 @@ import useSWR, { mutate } from "swr";
 
 import { getCacheKeyGenerator } from "@/lib/swr";
 import type { Book } from "@/models/book";
-import { addBook, deleteBook, getBook, getBookColRef, getBookDocRef, getBooks, updateBook } from "@/repositories/book";
+import { addBook, deleteBook, getBook, getBooks, updateBook } from "@/repositories/book";
 
 const bookCacheKey = getCacheKeyGenerator("book")();
 
@@ -11,13 +11,11 @@ export const useBooks = () => {
 };
 
 export const useBook = (id: string) => {
-  const bookDocRef = getBookDocRef(id);
-  return useSWR<Book | undefined>(bookCacheKey, () => getBook(bookDocRef));
+  return useSWR<Book | undefined>(bookCacheKey, () => getBook(id));
 };
 
 export const useAddBook = async (book: Book) => {
-  const bookColRef = getBookColRef();
-  await addBook(bookColRef, book);
+  await addBook(book);
   await mutate(
     bookCacheKey,
     () => (prev?: Book[]) => {
@@ -29,8 +27,7 @@ export const useAddBook = async (book: Book) => {
 };
 
 export const useUpdateBook = async (id: string, book: Book) => {
-  const bookDocRef = getBookDocRef(id);
-  await updateBook(bookDocRef, book);
+  await updateBook(id, book);
   await mutate(
     bookCacheKey,
     () => (prev?: Book[]) => {
@@ -42,8 +39,7 @@ export const useUpdateBook = async (id: string, book: Book) => {
 };
 
 export const useDeleteBook = async (id: string) => {
-  const bookDocRef = getBookDocRef(id);
-  await deleteBook(bookDocRef);
+  await deleteBook(id);
   await mutate(
     bookCacheKey,
     () => (prev?: Book[]) => {
