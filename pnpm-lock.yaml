@@ -4,6 +4,7 @@ specifiers:
   "@types/node": 16.0.0
   "@types/react": 18.0.15
   "@typescript-eslint/eslint-plugin": 5.30.6
+  "@typescript-eslint/parser": 5.30.7
   autoprefixer: 10.4.7
   eslint: 8.20.0
   eslint-config-next: 12.2.2
@@ -38,7 +39,8 @@ dependencies:
 devDependencies:
   "@types/node": 16.0.0
   "@types/react": 18.0.15
-  "@typescript-eslint/eslint-plugin": 5.30.6_he2ccbldppg44uulnyq4rwocfa
+  "@typescript-eslint/eslint-plugin": 5.30.6_6wltbjakwuqm7awqswigmiuhd4
+  "@typescript-eslint/parser": 5.30.7_he2ccbldppg44uulnyq4rwocfa
   autoprefixer: 10.4.7_postcss@8.4.14
   eslint: 8.20.0
   eslint-config-next: 12.2.2_he2ccbldppg44uulnyq4rwocfa
@@ -929,7 +931,7 @@ packages:
       { integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew== }
     dev: true
 
-  /@typescript-eslint/eslint-plugin/5.30.6_he2ccbldppg44uulnyq4rwocfa:
+  /@typescript-eslint/eslint-plugin/5.30.6_6wltbjakwuqm7awqswigmiuhd4:
     resolution:
       { integrity: sha512-J4zYMIhgrx4MgnZrSDD7sEnQp7FmhKNOaqaOpaoQ/SfdMfRB/0yvK74hTnvH+VQxndZynqs5/Hn4t+2/j9bADg== }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
@@ -941,6 +943,7 @@ packages:
       typescript:
         optional: true
     dependencies:
+      "@typescript-eslint/parser": 5.30.7_he2ccbldppg44uulnyq4rwocfa
       "@typescript-eslint/scope-manager": 5.30.6
       "@typescript-eslint/type-utils": 5.30.6_he2ccbldppg44uulnyq4rwocfa
       "@typescript-eslint/utils": 5.30.6_he2ccbldppg44uulnyq4rwocfa
