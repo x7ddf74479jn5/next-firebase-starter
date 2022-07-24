@@ -35,36 +35,36 @@ export const LogIn: React.VFC = () => {
         <h1 className="mb-6 text-xl font-bold">ログイン</h1>
         <form onSubmit={handleLogIn}>
           <div>
-            <label htmlFor="email" className="block mb-1 w-20">
+            <label htmlFor="email" className="mb-1 block w-20">
               Email:{" "}
             </label>
             <input
               id="email"
-              className="py-1 px-2 w-full rounded border border-gray-400 border-solid"
+              className="w-full rounded border border-solid border-gray-400 py-1 px-2"
               type="email"
               onChange={handleChangeEmail}
               required
             />
           </div>
           <div className="mt-2">
-            <label htmlFor="password" className="block mb-1 w-20">
+            <label htmlFor="password" className="mb-1 block w-20">
               Password:{" "}
             </label>
             <input
               id="password"
-              className=" py-1 px-2 w-full rounded border border-gray-400 border-solid"
+              className=" w-full rounded border border-solid border-gray-400 py-1 px-2"
               type="password"
               onChange={handleChangePassword}
               required
             />
           </div>
-          <button className="py-1 px-3 mt-4 text-white bg-blue-600 rounded border-blue-600 border-solid" type="submit">
+          <button className="mt-4 rounded border-solid border-blue-600 bg-blue-600 py-1 px-3 text-white" type="submit">
             ログイン
           </button>
         </form>
         <div className="text-center">
           <Link href="/signup">
-            <a className="inline-block mt-4 text-sm font-bold text-blue-600 hover:underline">サインアップ</a>
+            <a className="mt-4 inline-block text-sm font-bold text-blue-600 hover:underline">サインアップ</a>
           </Link>
         </div>
       </section>

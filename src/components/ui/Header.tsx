@@ -16,8 +16,8 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="py-4 bg-indigo-500">
-      <div className="container flex justify-between mx-auto">
+    <header className="bg-indigo-500 py-4">
+      <div className="container mx-auto flex justify-between">
         <p className="font-bold text-white">Auth TEST</p>
         <nav>
           <ul>

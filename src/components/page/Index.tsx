@@ -11,7 +11,7 @@ export const Home: React.VFC = withAuth(() => {
   return (
     <DefaultLayout>
       <div className="text-center">
-        <p className="mb-4 text-xl font-bold text-center">HELLO!!</p>
+        <p className="mb-4 text-center text-xl font-bold">HELLO!!</p>
         <p>Your Email: {user?.email}</p>
         {books?.map((book) => (
           <p key={book.id}>{book.title}</p>
