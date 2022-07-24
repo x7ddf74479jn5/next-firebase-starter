@@ -1,4 +1,5 @@
-import useSWR, { mutate } from "swr";
+import { mutate } from "swr";
+import useSWRImmutable from "swr/immutable";
 
 import { getCacheKeyGenerator } from "@/lib/swr";
 import type { Book } from "@/models/book";
@@ -7,11 +8,11 @@ import { addBook, deleteBook, getBook, getBooks, updateBook } from "@/repositori
 const bookCacheKey = getCacheKeyGenerator("book")();
 
 export const useBooks = () => {
-  return useSWR<Book[]>(bookCacheKey, getBooks);
+  return useSWRImmutable<Book[]>(bookCacheKey, getBooks);
 };
 
 export const useBook = (id: string) => {
-  return useSWR<Book | undefined>(bookCacheKey, () => getBook(id));
+  return useSWRImmutable<Book | undefined>(bookCacheKey, () => getBook(id));
 };
 
 export const useAddBook = async (book: Book) => {
