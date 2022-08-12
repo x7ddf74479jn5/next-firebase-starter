@@ -1,6 +1,6 @@
-import type { VFC } from "react";
+import type { FC } from "react";
 
-export const Footer: VFC = () => {
+export const Footer: FC = () => {
   return (
     <footer>
       <small lang="en">@ 20xx example.com</small>

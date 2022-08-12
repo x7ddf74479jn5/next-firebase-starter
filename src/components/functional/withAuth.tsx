@@ -3,8 +3,8 @@ import { useEffect } from "react";
 
 import { useAuthState, useUserState } from "@/globalStates/userState";
 
-export const withAuth = (Component: React.FC<any> | React.VFC<any>) => {
-  const Wrapper: React.VFC<Parameters<typeof Component>[0]> = (props) => {
+export const withAuth = (Component: React.FC<any> | React.FC<any>) => {
+  const Wrapper: React.FC<Parameters<typeof Component>[0]> = (props) => {
     const user = useUserState();
     const { push } = useRouter();
     const isLoading = useAuthState();

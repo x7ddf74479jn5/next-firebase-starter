@@ -3,7 +3,7 @@ import { DefaultLayout } from "@/components/ui/layout/DefaultLayout";
 import { useUserState } from "@/globalStates/userState";
 import { useBooks } from "@/usecases/book";
 
-export const Home: React.VFC = withAuth(() => {
+export const Home: React.FC = withAuth(() => {
   const user = useUserState();
 
   const { data: books } = useBooks();

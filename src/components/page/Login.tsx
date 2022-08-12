@@ -5,7 +5,7 @@ import { useState } from "react";
 import { AuthLayout } from "@/components/ui/layout/AuthLayout";
 import { loginWithEmailAndPassword } from "@/globalStates/userState";
 
-export const LogIn: React.VFC = () => {
+export const LogIn: React.FC = () => {
   const { push } = useRouter();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
