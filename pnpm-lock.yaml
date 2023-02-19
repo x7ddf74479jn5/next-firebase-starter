@@ -9,7 +9,7 @@ specifiers:
   eslint: 8.34.0
   eslint-config-next: 13.1.6
   eslint-config-prettier: 8.6.0
-  eslint-plugin-simple-import-sort: 8.0.0
+  eslint-plugin-simple-import-sort: 10.0.0
   eslint-plugin-sort-destructure-keys: 1.5.0
   eslint-plugin-tailwindcss: 3.8.3
   firebase: 9.17.1
@@ -45,7 +45,7 @@ devDependencies:
   eslint: 8.34.0
   eslint-config-next: 13.1.6_7kw3g6rralp5ps6mg3uyzz6azm
   eslint-config-prettier: 8.6.0_eslint@8.34.0
-  eslint-plugin-simple-import-sort: 8.0.0_eslint@8.34.0
+  eslint-plugin-simple-import-sort: 10.0.0_eslint@8.34.0
   eslint-plugin-sort-destructure-keys: 1.5.0_eslint@8.34.0
   eslint-plugin-tailwindcss: 3.8.3_tailwindcss@3.2.7
   husky: 8.0.3
@@ -1756,8 +1756,8 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-simple-import-sort/8.0.0_eslint@8.34.0:
-    resolution: {integrity: sha512-bXgJQ+lqhtQBCuWY/FUWdB27j4+lqcvXv5rUARkzbeWLwea+S5eBZEQrhnO+WgX3ZoJHVj0cn943iyXwByHHQw==}
+  /eslint-plugin-simple-import-sort/10.0.0_eslint@8.34.0:
+    resolution: {integrity: sha512-AeTvO9UCMSNzIHRkg8S6c3RPy5YEwKWSQPx3DYghLedo2ZQxowPFLGDN1AZ2evfg6r6mjBSZSLxLFsWSu3acsw==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
