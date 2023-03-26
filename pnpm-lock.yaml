@@ -22,7 +22,7 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   recoil: 0.7.7
-  swr: 2.1.0
+  swr: 2.1.1
   tailwindcss: 3.2.7
   typescript: 5.0.2
   zod: 3.21.4
@@ -33,7 +33,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   recoil: 0.7.7_biqbaboplfbrettd7655fr4n2y
-  swr: 2.1.0_react@18.2.0
+  swr: 2.1.1_react@18.2.0
   zod: 3.21.4
 
 devDependencies:
@@ -3634,8 +3634,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /swr/2.1.0_react@18.2.0:
-    resolution: {integrity: sha512-4hYl5p3/KalQ1MORealM79g/DtLohmud6yyfXw5l4wjtFksYUnocRFudvyaoUtgj3FrVNK9lS25Av9dsZYvz0g==}
+  /swr/2.1.1_react@18.2.0:
+    resolution: {integrity: sha512-OgwqZmpjOgxNbaez6qzTVqiRWn+Ti5Uzmktk2c01Afqwc50q6z15DeNC8m9G1aY+w2BwEAsKvk59iq6aHlhgyw==}
     engines: {pnpm: '7'}
     peerDependencies:
       react: ^16.11.0 || ^17.0.0 || ^18.0.0
